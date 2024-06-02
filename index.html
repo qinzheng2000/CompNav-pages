@@ -1,0 +1,320 @@
+
+<!-- saved from url=(0020)https://www.lerf.io/ -->
+<html class="wf-opensans-n4-active wf-opensans-n6-active wf-opensans-n7-active wf-opensans-n8-active wf-roboto-n4-active wf-varelaround-n4-active wf-lato-n1-active wf-lato-n3-active wf-lato-i1-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-roboto-n3-active wf-roboto-n5-active wf-opensans-n3-active wf-opensans-i3-active wf-opensans-i8-active wf-opensans-i7-active wf-opensans-i6-active wf-opensans-i4-active wf-ubuntu-i4-active wf-ubuntu-n4-active wf-ubuntu-i3-active wf-lato-n9-active wf-ubuntu-n3-active wf-lato-i3-active wf-lato-i9-active wf-lato-i7-active wf-montserrat-i6-active wf-montserrat-i7-active wf-montserrat-i9-active wf-montserrat-i8-active wf-montserrat-i5-active wf-montserrat-i2-active wf-montserrat-i1-active wf-montserrat-i4-active wf-montserrat-i3-active wf-montserrat-n5-active wf-montserrat-n7-active wf-montserrat-n9-active wf-montserrat-n2-active wf-montserrat-n4-active wf-montserrat-n6-active wf-montserrat-n3-active wf-montserrat-n1-active wf-montserrat-n8-active wf-bungeeshade-n4-active wf-bungeeoutline-n4-active wf-changaone-i4-active wf-changaone-n4-active wf-ubuntu-n7-active wf-ubuntu-n5-active wf-ubuntu-i5-active wf-ubuntu-i7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="./template/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FYQNRK8LHK');
+    </script>
+
+    
+    <title>FGPrompt: Fine-grained Goal Prompting for Image-goal Navigation</title>
+
+    <!-- <meta content="Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D" name="description">
+    <meta content="FGPrompt: Fine-grained Goal Prompting for Image-goal Navigation" property="og:title">
+    <meta content="Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D" property="og:description">
+    <meta content="http://lerf.io/data/lerf_meta_img.jpg" property="og:image">
+    <meta content="FGPrompt: Fine-grained Goal Prompting for Image-goal Navigation" property="twitter:title">
+    <meta content="Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D" property="twitter:description">
+    <meta content="http://lerf.io/data/lerf_meta_img.jpg" property="twitter:image">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> -->
+
+
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous">
+    <script src="./template/webfont.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./template/css" media="all"><script type="text/javascript">WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic", "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Changa One:400,400italic", "Varela Round:400", "Bungee Shade:regular", "Roboto:300,regular,500", "Bungee Outline:regular"] } });</script>
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+
+    <script src="./template/jquery.min.js"></script>
+    <script src="./template/script.js" type="text/javascript"></script>
+
+    <link href="./template/style.css" rel="stylesheet" type="text/css">
+
+    <link href="data/robot.svg" rel="shortcut icon" type="image/x-icon">
+
+    <link rel="stylesheet" href="./template/font-awesome.min.css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1130.0" data-gr-ext-installed="">
+    <div class="section">
+        <div class="container">
+            <div class="title-row">
+                <h1 class="title">FGPrompt</h1>
+                <h1 class="subheader"> 📎 Fine-grained Goal Prompting for Image-goal Navigation 🤖</h1>
+            </div>
+            <div class="base-row author-row">
+                <div class="base-col author-col">
+                    <a href="https://github.com/XinyuSun" target="_blank" class="author-text">
+                        <sup>1,3</sup>Xinyu Sun
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://peihaochen.github.io/" target="_blank" class="author-text">
+                        <sup>1</sup>Peihao Chen
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://github.com/XinyuSun" target="_blank" class="author-text">
+                        <sup>1</sup>Jugang Fan
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://ieeexplore.ieee.org/author/37086497292" target="_blank" class="author-text">
+                        <sup>4</sup>Thomas H. Li
+                        <span class="superscript"></span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://orcid.org/0000-0003-4769-1526" target="_blank" class="author-text">
+                        <sup>1</sup>Jian Chen
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://tanmingkui.github.io/" target="_blank" class="author-text">
+                        <sup>1,2,5</sup>Mingkui Tan
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h1 id="uc-berkeley"><sup>1</sup>South China University of Technology, <sup>2</sup>Pazhou Laboratory</h1>
+                <h1 id="uc-berkeley"><sup>3</sup>Information Technology R&D Innovation Center of Peking University</h1>
+                <h1 id="uc-berkeley"><sup>4</sup>Peking University Shenzhen Graduate School</h1>
+                <h1 id="uc-berkeley"><sup>5</sup>Key Laboratory of Big Data and Intelligent Robot, Ministry of Education</h1>
+                <!-- <br /> -->
+                <!-- <div id="equal_contrib">
+                    <span class="text-star">*</span>Denotes Equal Contribution
+                </div> -->
+            </div>
+            <div class="title-row">
+                <h2 class="subheader">NeurIPS 2023</h2>
+            </div>
+            <div class="link-labels base-row">
+                <!-- TODO: Update arxiv link -->
+                <div class="base-col icon-col"><a href="https://arxiv.org/abs/2310.07473" target="_blank" class="link-block"><img src="./template/5cab99df4998decfbf9e218e_paper-01.png" alt="paper" sizes="(max-width: 479px) 12vw, (max-width: 767px) 7vw, (max-width: 991px) 41.8515625px, 56.6953125px" srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png 500w, https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png 672w" class="icon-img"></a></div>
+                <!-- TODO: Update code link -->
+                <div class="base-col icon-col"><a href="https://github.com/XinyuSun/FGPrompt" class="link-block"><img src="./template/5cae3b53b42ebb3dd4175a82_68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67.png" alt="paper" class="icon-img github-img-icon"></a></div>
+                <!-- TODO: Update data link -->
+                <div class="column-2 base-col icon-col"><a href="" target="_blank" class="link-block"><img src="./template/5e7136849ee3b0a0c6a95151_database.svg" alt="paper" class="icon-img data-img-icon"></a></div>
+            </div>
+            <div class="link-labels base-row">
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Paper</strong>
+                </div>
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">&lt;/Code&gt;</strong>
+                </div>
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Data</strong>
+                </div>
+            </div>
+            <h1 class="tldr">
+                <b>TL;DR</b>:
+                Injecting fine-grained goal-prompting allows efficient embodied environmental perception.
+                <!-- We proposed a fine-grained goal prompting method for image-goal navigation. It significantly outperforms baselines (+209%), surpassing SOTA by 8% in success rate with 1/50 model size. -->
+            </h1>
+            <video id="main-video" autobuffer="" muted="" autoplay="" loop="" controls="">
+                <source id="mp4" src="data/video/all-episodes-text.mp4" type="video/mp4">
+            </video>
+
+
+            <div class="base-row add-top-padding">
+                <h1 id="abstract">Overview</h1>
+                <p class="paragraph">
+                    We aim to tackle the image-goal navigation task, in which the agent is required to reason the goal location from where a picture is shot. 
+                    <!-- Learning to navigate to an image-specified goal is an important but challenging task for autonomous systems. The agent is required to reason the goal location from where a picture is shot.  -->
+                    <!-- Existing methods try to solve this problem by learning a navigation policy, which captures semantic features of the goal image and observation image independently and lastly fuses them for predicting a sequence of navigation actions.  -->
+                    Existing methods perform poor as: 1) they <b>miss the detailed information</b> in the goal image since they only consider the semantic level image features; 2) they failed to learn a observation encoder <b>conditioned on the goal image</b>.
+                    <!-- However, these methods suffer from two major limitations. 1) They may miss detailed information in the goal image, and thus fail to reason the goal location. 2) More critically, it is hard to focus on the goal-relevant regions in the observation image, because they attempt to understand observation without goal conditioning.  -->
+                    In this paper, we propose the <b>Fine-grained Goal Prompting (FGPrompt)</b> method for image-goal navigation.
+                    We leverage fine-grained and high-resolution feature maps in the goal image as prompts to perform conditioned embedding, which preserves detailed information in the goal image and guides the observation encoder to pay attention to goal-relevant regions.
+                    Compared with existing methods on the image-goal navigation benchmark, our method brings significant performance improvement on 3 benchmark datasets (i.e., Gibson, MP3D, and HM3D). 
+                    <!-- Especially on Gibson, we surpass the state-of-the-art success rate by 8% with only 1/50 model size. -->
+                    <!-- In this paper, we aim to overcome these limitations by designing a Fine-grained Goal Prompting (FGPrompt) method for image-goal navigation. In particular, we leverage fine-grained and high-resolution feature maps in the goal image as prompts to perform conditioned embedding, which preserves detailed information in the goal image and guides the observation encoder to pay attention to goal-relevant regions. Compared with existing methods on the image-goal navigation benchmark, our method brings significant performance improvement on 3 benchmark datasets (i.e., Gibson, MP3D, and HM3D). Especially on Gibson, we surpass the state-of-the-art success rate by 8% with only 1/50 model size. -->
+                </p>
+            </div>
+                <div id="why-lerf">
+                    <h1> Main Results</h1>
+                    <p class="paragraph">
+                        Compared with existing methods on the image-goal navigation benchmark, our method brings significant performance improvement on 3 benchmark datasets (i.e., Gibson, MP3D, and HM3D). 
+                        Especially on Gibson, we significantly <b>outperform baselines by +209%</b> and surpass the state-of-the-art success rate by a large margin <b>with only 1/50 model size</b>.
+                    </p>
+                    <img id="pipeline-img" src="./data/teaser_00.png">
+                    <figcaption><b>left</b>: success rate comparison with baseline on three different datasets; <b>right</b>: comparison with SOTA both on success rate and the number of parameters.</figcaption>
+                    <!-- <img id="why-lerf-img" src="./template/2d-3d-lerf-vert.jpg"> -->
+                </div>
+                <div id="why-lerf">
+                    <h1> Proposed Method</h1>
+                    <p class="paragraph">
+                        We implement the goal prompting scheme as a fusion process between the goal and observation images and design a early fusion (<b>FGPrompt-EF</b>) and a mid fusion (<b>FGPrompt-MF</b>) mechanism. We also implement a heuristic skip fusion baseline to validate the effectiveness of the proposed learnable modules.
+                    </p>
+                    <video id="main-video" autobuffer="" muted="" autoplay="" loop="" controls="">
+                        <source id="mp4" src="data/video/method.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Overview of our proposed method. All of the variants are built upon the end-to-end RL baseline.</figcaption>
+                    <p class="paragraph"></p>
+                    <p class="paragraph">
+                        The <b>Early Fusion</b> mechanism is built upon a naive solution to exchange information in two images that directly concatenate them together in the channel dimension before input to the encoder. 
+                        <!-- We found that this simple design yields a promising performance on the image navigation benchmark. 
+                        However, as it enables spatial reasoning between two images using an identical convolution kernel, <i>it may be difficult to handle the situation when the orientation of the goal camera is noisy.</i> -->
+                    </p>
+                    <p class="paragraph">
+                        The <b>Mid Fusion</b> mechanism is a more robust solution in comparison. It leverages fine-grained and high-resolution feature maps in the intermediate goal network layers as the prompts. 
+                        <!-- We then utilize FiLM layers to learn a transform function to adjust the observation activations to focus on goal-relevant objects. -->
+                    </p>
+                    
+                </div>
+
+                <div class="why-lerf">
+                    <h1>SOTA Comparison on ImageNav</h1>
+                    <p class="paragraph">
+                        Our proposed FGPrompt-MF and FGPrompt-EF methods take an absolute advantage compared with all previous methods, including end-to-end methods and memory graph-based methods. When transferred to the out-of-domain datasets, the FGPrompt-MF also <b>brings 7× improvements</b> in the success rate, indicating the generalization ability of our method.
+                    </p>
+                </div>
+                <img id="pipeline-img" src="./data/sota-table.png">
+                <img id="pipeline-img" src="./data/cross-domain-table.png">
+
+                <div id="why-lerf">
+                    <h1> How does goal-prompting works?</h1>
+                    <p class="paragraph">
+                        We visualize the intermediate feature maps of Mid Fusion and Early Fusion using <b>EigenCAM</b>.
+                        Prompted with the fine-grained and high-resolution activation map from the goal image, the agent is able to find out the relevant objects in the current observation and pay more attention to them, as shown in the activation visualization in the last column.
+                    </p>
+                    <img id="heatmap-img" src="./data/heatmap2_00.png">
+                    <img id="why-lerf-img" src="./data/supp-early-visual_00.png">
+                    <figcaption><b>left</b>: EigenCAM visualization of the <b>Mid Fusion</b> activation maps; <b>right</b>: EigenCAM visualization of the <b>Early Fusion</b> activation maps.</figcaption>
+                </div>
+
+                <div id="why-lerf">
+                    <h1> Robustness under dynamic camera parameter setting.</h1>
+                    <p class="paragraph">
+                        For a wider application scope, it is important for the image navigation agent to handle the situation where <b>the goal camera shares different camera parameters with the agent's one</b>. We augment the gibson ImageNav testing episodes using random <b><span style="color: #4fad5b">camera height</span>, <span style="color: #b86029">pitch angle</span>, and <span style="color: #4fadea">HFOV</span></b> to initialize the goal camera. 
+                        The mid-fusion mechanism performs the best in this scenario.
+                    </p>
+                    <img id="camera-img" src="./data/camera.png">
+                    <img id="table-img" src="./data/aug.png">
+                    <p class="paragraph">
+                        We further conduct experiments on the <b>instance image navigation (iin)</b> dataset. The episodes in this dataset cover a wide range of object instances in the environment and are much harder to finish. We train three agents on the HM3D ImageNav dataset and evaluate them on the test split of the iin dataset. The baseline agent performs poorly, but our mid-fusion still brings consistent improvement in this task.
+                    </p>
+                    <img id="camera-img" src="./data/camera2.png">
+                    <img id="table-img" src="./data/iin.png">
+                </div>
+
+                <div id="why-lerf">
+                    <h1> Transfer to other embodied task.</h1>
+                    <p class="paragraph">
+                        FGPrompt is also applicable in other embodied task, for example, the visual rearrangement task.
+                        We conduct experiments on the 1-Phase track of the <b><a href="https://github.com/allenai/ai2thor-rearrangement">2023 ai2thor-rearrangement challenge</a></b>.
+                        See visualization video bellow: 
+                    </p>
+
+                        <video id="addtl-video" autobuffer="" muted="" autoplay="" loop="" controls="">
+                            <source id="mp4" src="data/video/rearrangement.mp4" type="video/mp4">
+                        </video>
+
+                    <p class="paragraph">
+                        <!-- We start from a ResNet18+IL baseline that separately encodes the unshuffled image and agent's current observation(the walkthrough image) without fusion mechanism and learn from expert actions.  -->
+                        <!-- We introduce our proposed <b>FGPrompt-EF module</b> into the ResNet18+IL baseline model by fusing the observation with the unshuffled image in an early stage. -->
+                        <!-- , resulting in one jointly modeled ResNet encoder. -->
+                        With our FGPrompt, the agent performs much better than the baseline (with <b>more than 400% improvement</b> on the <b>Success</b> and <b>FixedStrict</b> metric). We believe it helps the agent to locate correspondent or inconsistent objects in the environment.
+                    </p>
+                    <img id="pipeline-img" src="./data/ai2thor.png">
+                    <!-- <img id="why-lerf-img" src="./data/supp-early-visual_00.png">
+                    <figcaption><b>left</b>: EigenCAM visualization of the <b>Mid Fusion</b> activation maps; <b>right</b>: EigenCAM visualization of the <b>Early Fusion</b> activation maps.</figcaption> -->
+
+                </div>
+
+                
+
+
+                <!-- <div class="highlight-none notranslate"><div class="highlight"><pre id="codecell0"><span></span>@article{nerfstudio, -->
+                <div class="citation add-top-padding">
+                    <h1 id="abstract"> Citation </h1>
+                    <p> If you use this work or find it helpful, please consider citing: (bibtex) </p>
+                    <pre id="codecell0">@inproceedings{fgprompt2023,
+&nbsp;author = {Xinyu, Sun and Peihao, Chen and Jugang, Fan and Thomas, H. Li and Jian, Chen and Mingkui, Tan},
+&nbsp;title = {FGPrompt: Fine-grained Goal Prompting for Image-goal Navigation},
+&nbsp;booktitle = {37th Conference on Neural Information Processing Systems (NeurIPS 2023)},
+&nbsp;year = {2023},
+} </pre>
+                </div>
+
+                <b>Acknowledgement</b>: Source code for this page was taken from <a href="https://lerf.io">LERF's website.</a>
+
+                <br>
+  
+                <a href="https://www.easycounter.com/">
+                <img src="https://www.easycounter.com/counter.php?xinyusun"
+                border="0" alt="Free Hit Counters"></a>
+                <br><a href="https://www.easycounter.com/">Web Site Hit Counters</a>
+                    
+                
+                <br>
+
+            </div>
+        </div>
+    </div>
+    <video id="bouquet" controls="false" loop="" autoplay="" muted="" class="videos" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/bouquet_concat.webm" type="video/webm">
+        <source src="data/playback/bouquet_concat.mp4" type="video/mp4">
+    </video>
+    <video id="figurines" controls="false" loop="" muted="" class="videos" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/figurines_concat.webm" type="video/webm">
+        <source src="data/playback/figurines_concat.mp4" type="video/mp4">
+    </video>
+    <video id="kitchen" controls="false" loop="" muted="" class="videos" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/kitchen_concat.webm" type="video/webm">
+        <source src="data/playback/kitchen_concat.mp4" type="video/mp4">
+    </video>
+    <video id="donuts" controls="false" loop="" muted="" class="videos" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/donuts_concat.webm" type="video/webm">
+        <source src="data/playback/donuts_concat.mp4" type="video/mp4">
+    </video>
+    <video id="teatime" controls="false" loop="" muted="" class="videos" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/teatime_concat.webm" type="video/webm">
+        <source src="data/playback/teatime_concat.mp4" type="video/mp4">
+    </video>
+    <video id="bookstore" controls="false" loop="" muted="" class="videos" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/bookstore_concat.webm" type="video/webm">
+        <source src="data/playback/bookstore_concat.mp4" type="video/mp4">
+    </video>
+    <video id="grocery" class="videos" controls="false" loop="" muted="" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/veggieaisle_concat.webm" type="video/webm">
+        <source src="data/playback/veggieaisle_concat.mp4" type="video/mp4">
+    </video>
+    <video id="garden" class="videos" controls="false" loop="" muted="" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/sunnyside_concat.webm" type="video/webm">
+        <source src="data/playback/sunnyside_concat.mp4" type="video/mp4">
+    </video>
+    <video id="shoes" class="videos" controls="false" loop="" muted="" webkit-playsinline="" playsinline="">
+        <source src="data/playback_webm/shoerack_concat.webm" type="video/webm">
+        <source src="data/playback/shoerack_concat.mp4" type="video/mp4">
+    </video>
+
+<deepl-input-controller><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div><div class="dl-input-translation-container svelte-ju4595"><div></div></div></div></template></deepl-input-controller></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
